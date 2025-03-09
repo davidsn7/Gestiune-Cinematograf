@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{09347C2C-642C-4B6A-B45F-E0D17DD8B286}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Gestiune_Cinematograf</RootNamespace>
-    <AssemblyName>Gestiune Cinematograf</AssemblyName>
+    <ProjectGuid>{D3B43CA1-CA70-4799-8103-19B78AA37F3A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Cinematograf</RootNamespace>
+    <AssemblyName>Cinematograf</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,14 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clase\Film.cs" />
-    <Compile Include="Clase\Proiectie.cs" />
-    <Compile Include="Clase\Rezervare.cs" />
-    <Compile Include="Clase\Sala.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gestiune Cinematograf\Gestiune Cinematograf.csproj">
+      <Project>{09347c2c-642c-4b6a-b45f-e0d17dd8b286}</Project>
+      <Name>Gestiune Cinematograf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NivelStocareDate\NivelStocareDate.csproj">
+      <Project>{3c727641-cd80-4ead-b6cc-84aec51cd90b}</Project>
+      <Name>NivelStocareDate</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

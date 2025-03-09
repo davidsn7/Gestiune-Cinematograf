@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Gestiune_Cinematograf.Clase
+﻿namespace Gestiune_Cinematograf.Clase
 {
-    class Rezervare
+    public class Rezervare
     {
         public int Id { get; set; }
         public Proiectie Proiectie { get; set; }
@@ -23,8 +17,7 @@ namespace Gestiune_Cinematograf.Clase
 
         public string AfiseazaDetalii()
         {
-            return $"ID: {Id} | Client: {ClientNume} | Film: {Proiectie.Film.Titlu} | Loc: {Loc}";
+            return $"ID: {Id} | Client: {ClientNume} | Film: {Proiectie.Film.Titlu} | Sala: {Proiectie.Sala.Nume} | Loc: {Loc}";
         }
     }
 }
-

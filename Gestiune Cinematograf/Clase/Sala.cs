@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Gestiune_Cinematograf.Clase
+﻿namespace Gestiune_Cinematograf.Clase
 {
-    class Sala
+    public class Sala
     {
         public int Id { get; set; }
-        public string Denumire { get; set; }
+        public string Nume { get; set; }
         public int Capacitate { get; set; }
 
-        public Sala(int id, string denumire, int capacitate)
+        public Sala(int id, string nume, int capacitate)
         {
             Id = id;
-            Denumire = denumire;
+            Nume = nume;
             Capacitate = capacitate;
         }
 
         public string AfiseazaDetalii()
         {
-            return $"ID: {Id} | Sala: {Denumire} | Capacitate: {Capacitate} locuri";
+            return $"ID: {Id} | Nume: {Nume} | Capacitate: {Capacitate}";
         }
     }
 }
