@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gestionare.cs" />
+    <Compile Include="AdministrareFilme.cs" />
+    <Compile Include="AdministrareProiectii.cs" />
+    <Compile Include="AdministrareRezervari.cs" />
+    <Compile Include="AdministrareSali.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

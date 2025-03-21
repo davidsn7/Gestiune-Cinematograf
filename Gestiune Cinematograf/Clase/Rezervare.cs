@@ -6,13 +6,21 @@
         public Proiectie Proiectie { get; set; }
         public string ClientNume { get; set; }
         public int Loc { get; set; }
+        public double PretBilet { get; set; }
 
-        public Rezervare(int id, Proiectie proiectie, string clientNume, int loc)
+        public Rezervare(int id, Proiectie proiectie, string clientNume, int loc, double pretBilet)
         {
             Id = id;
             Proiectie = proiectie;
             ClientNume = clientNume;
             Loc = loc;
+            PretBilet = pretBilet;
+        }
+
+        public string ConversieLaSir_fisier()
+        {
+            const char SEPARATOR = ';';
+            return $"{Id}{SEPARATOR}{Proiectie.Id}{SEPARATOR}{ClientNume}{SEPARATOR}{Loc}{SEPARATOR}{PretBilet}";
         }
 
         public string AfiseazaDetalii()
